@@ -1,0 +1,170 @@
+.header {
+    padding: 0 70px 0;
+    width: 100%;
+    display: flex;
+    background-color: #073042;
+    box-sizing: border-box;
+    border:none;
+    height: 74px;
+    justify-content: space-between;
+}
+
+.header__logo{
+    width: 38px;
+    height: 38px;
+    align-self: center;
+}
+
+.header__signup {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: white;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.header__signin {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: black;
+    text-decoration: none;
+    align-self: center;
+}
+
+.header__signin-wrapper {
+    width: 76px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 3px;
+    background: #3DDC84;
+}
+
+.header__nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+.header__films {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.header__saved-films {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    margin-left: 18px;
+}
+
+.header__account-wrapper {
+    width: 100px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 20px;
+    background-color: #313131;
+    transition: .4s ease-in-out;
+    cursor: pointer;
+}
+
+.header__account-wrapper:hover{
+    transform: scale(1.1);
+}
+
+.header__nav-films{
+    margin-left: 0;
+    width: 100%;
+    padding-left: 44px;
+    justify-content: space-between;
+}
+.header__account{
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 114.286% */
+    text-decoration: none;
+    align-self: center;
+}
+
+.header_type_gray{
+    background: #202020;
+}
+.header__burger{
+    display: none;
+    background-color: transparent;
+    border: none;
+    background-image: url("../../images/icon__COLOR_icon-main.svg");
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 2px 30px 0;
+    }
+
+    .header__films-count{
+        display: none;
+    }
+
+    .header__account-wrapper{
+        display: none;
+    }
+
+    .header__burger{
+        display: block;
+        margin: 0 0 8px;
+    }
+
+    .header__nav {
+        justify-content: flex-end;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header {
+        padding: 0 15px 0;
+    }
+
+    .header__burger{
+        width: 40px;
+        height: 40px;
+    }
+
+    .header__signin-wrapper {
+        width: 54px;
+        height: 26px;
+    }
+
+    .header__signin {
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+    }
+
+    .header__signup {
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        margin-right: 14px;
+    }
+}

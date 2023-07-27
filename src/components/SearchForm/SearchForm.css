@@ -1,0 +1,156 @@
+
+.search {
+    display: flex;
+    background: #202020;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 70px 76px 62px;
+}
+
+.movies-form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom:1px solid #424242;
+}
+
+.movies-form__submit {
+    width: 80px;
+    border: none;
+    border-radius: 48px;
+    height: 34px;
+    background-color: #4285F4;
+    cursor: pointer;
+}
+
+.movies-form__input {
+    background: #202020;
+    border: none;
+    margin-left: 28px;
+    outline: none;
+    width: 100%;
+    text-align: center;
+    color: #8B8B8B;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.movies-checkbox-label {
+    display: flex;
+    max-width: 36px;
+    padding-top: 26px;
+    justify-content: center;
+    align-items: center;
+}
+
+.movies-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 36px;
+    height: 20px;
+    background: #343434;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.movies-checkbox:after{
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #FFFFFF;
+    top: 2px;
+    left: 2px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.movies-checkbox:checked:after{
+    background: #2BE080;
+    left: calc(100% - 18px);
+}
+
+.movies-checkbox-text{
+    margin: 0;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    padding-top: 29px;
+    padding-left: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .search {
+        padding: 86px 30px 62px;
+    }
+    .movies-form__search-icon_gray{
+        margin-left: 5px;
+    }
+    .movies-form__submit {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .search {
+        display: flex;
+        background: #202020;
+        align-items: center;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding: 93px 14px 62px;
+    }
+
+    .movies-form{
+        padding-bottom: 8px;
+    }
+
+    .movies-form__search-icon_gray{
+        display: none;
+    }
+
+    .movies-form__input {
+        text-align: left;
+        margin: 0;
+        color: #8B8B8B;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .movies-form__submit {
+        width: 106px;
+
+    }
+
+    .movies-checkbox-label {
+        padding-top: 40px;
+        width: 40px;
+    }
+
+    .movies-checkbox-text{
+        padding-top: 40px;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px; /* 163.636% */
+    }
+    .movies-checkbox {
+        width: 40px;
+    }
+}
