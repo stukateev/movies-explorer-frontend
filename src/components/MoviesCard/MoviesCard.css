@@ -101,6 +101,14 @@
     .movies-card{
         width: 300px;
         height: 232px;
+        align-content: flex-end;
+    }
+
+    .movies__wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
 
     .movies__pic{
@@ -111,24 +119,25 @@
     }
 
     .movies__title {
-        max-width: 228px;
+        margin-top: 10px;
+        width: 80%;
         font-size: 12px;
     }
 
     .movies__like {
-        position: absolute;
-        right: 4px;
-        top: -27px;
+        margin: 10px 0 0 auto;
+        order: 2;
     }
 
     .movies__delete{
-        position: absolute;
-        right: 4px;
-        top: -27px;
+        margin: 10px 0 0 auto;
+        order: 2;
     }
 
     .movies__duration {
-        margin-top: 10px;
-        max-width: 228px;
+        width: 80%;
+        margin-top: 8px;
+        order: 3;
+        justify-self: flex-start;
     }
 }

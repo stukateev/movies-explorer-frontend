@@ -18,7 +18,7 @@
 
 .about-project__container {
     display: grid;
-    grid-template-columns: 48.8% 45%;
+    grid-template-columns: 52% 48%;
     grid-template-rows: 56px 56px;
     margin: 50px 0 0 0;
 }
@@ -41,7 +41,7 @@
 .about-project__time-container {
     margin: 107px 0 0;
     display: grid;
-    grid-template-columns: minmax(100px, 228px) minmax(400px, 912px);
+    grid-template-columns: 20% 80%;
     grid-template-rows: 36px;
     text-align: center;
     align-items: center;
@@ -165,16 +165,16 @@
         line-height: 13px;
     }
 
-    .box-1 {
+    .about-project__subtitle_left {
         order: 0;
     }
-    .box-2 {
+    .about-project__description_left {
         order: 1;
     }
-    .box-3 {
+    .about-project__subtitle_right {
         order: 2;
     }
-    .box-4 {
+    .about-project__description_right {
         order: 3;
     }
 }

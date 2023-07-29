@@ -13,7 +13,6 @@ import Navigation from "../Navigation/Navigation";
 import NotFound from "../NotFound/NotFound";
 import SavedMovies from "../SavedMovies/SavedMovies";
 
-
 export default function App() {
     const [burgerOpen, setBurgerOpen] = React.useState(false);
 

@@ -19,7 +19,9 @@
     color: white;
 }
 .about-me__wrapper{
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     position: relative;
 }
 
@@ -59,8 +61,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
 }
 
 .about-me__description {
@@ -129,6 +130,9 @@
 }
 
 @media screen and (max-width: 320px) {
+    .about-me__description {
+        height: 150px;
+    }
 
     .about-me__heading {
         font-size: 18px;

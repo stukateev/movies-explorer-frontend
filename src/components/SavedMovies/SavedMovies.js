@@ -4,10 +4,10 @@ import MoviesCardList from "../MoviesCardList/MoviesCardList";
 
 function SavedMovies() {
     return(
-        <>
+        <main>
             <SearchForm/>
             <MoviesCardList path={true}/>
-        </>
+        </main>
     )
 }
 

@@ -8,22 +8,21 @@ function Portfolio() {
             <h2 className='portfolio__portfolio-subheading'>Портфолио</h2>
             <ul className='portfolio__portfolio_list'>
                 <li className='portfolio__portfolio-item portfolio-item'>
-                    <a className='portfolio-item__arrow' href='https://github.com/Stukateev/how-to-learn/'>
+                    <a className='portfolio-item__arrow button' target="_blank" rel="noopener noreferrer" href='https://github.com/Stukateev/how-to-learn/'>
                         Статичный сайт
-                       <img className='portfolio-item__arrow-image' src={arrow} alt='Ссылка' />
+                       <img className='portfolio-item__arrow-image' src={arrow} alt='Стрелка. Векторная стрелка выбора.' />
                     </a>
                 </li>
                 <li className='portfolio__portfolio-item portfolio-item'>
-
-                    <a className='portfolio-item__arrow' href='https://Stukateev.github.io/russian-travel/'>
+                    <a className='portfolio-item__arrow button' target="_blank" rel="noopener noreferrer" href='https://Stukateev.github.io/russian-travel/'>
                         Адаптивный сайт
-                        <img className='portfolio-item__arrow-image' src={arrow} alt='Ссылка' />
+                        <img className='portfolio-item__arrow-image' src={arrow} alt='Стрелка. Векторная стрелка выбора.' />
                     </a>
                 </li>
                 <li className='portfolio__portfolio-item portfolio-item'>
-                    <a className='portfolio-item__arrow' href='https://github.com/Stukateev/react-mesto-auth'>
+                    <a className='portfolio-item__arrow button' target="_blank" rel="noopener noreferrer" href='https://stukateev.github.io/mesto/'>
                         Одностраничное приложение
-                        <img className='portfolio-item__arrow-image' src={arrow} alt='Ссылка' />
+                        <img className='portfolio-item__arrow-image' src={arrow} alt='Стрелка. Векторная стрелка выбора.' />
                     </a>
                 </li>
             </ul>

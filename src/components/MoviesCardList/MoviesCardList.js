@@ -4,14 +4,14 @@ import './MoviesCardList.css'
 function MoviesCardList(props) {
     return(
         <section className='card-list'>
-            <MoviesCard savedMovies={props.path} />
-            <MoviesCard savedMovies={props.path} />
-            <MoviesCard savedMovies={props.path} />
-            <MoviesCard savedMovies={props.path} />
-            <MoviesCard savedMovies={props.path} />
-            <MoviesCard savedMovies={props.path} />
-            <MoviesCard savedMovies={props.path} />
-            <button className='card-list__more' type='button'>Ещё</button>
+            <MoviesCard savedMovies={props.path} picAlt={'Марта Купер. A Picture Story.'}/>
+            <MoviesCard savedMovies={props.path} picAlt={'Марта Купер. A Picture Story.'}/>
+            <MoviesCard savedMovies={props.path} picAlt={'Марта Купер. A Picture Story.'}/>
+            <MoviesCard savedMovies={props.path} picAlt={'Марта Купер. A Picture Story.'}/>
+            <MoviesCard savedMovies={props.path} picAlt={'Марта Купер. A Picture Story.'}/>
+            <MoviesCard savedMovies={props.path} picAlt={'Марта Купер. A Picture Story.'}/>
+            <MoviesCard savedMovies={props.path} picAlt={'Марта Купер. A Picture Story.'}/>
+            <button className='card-list__more button' type='button'>Ещё</button>
         </section>
     )
 }

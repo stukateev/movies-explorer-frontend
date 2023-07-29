@@ -33,14 +33,20 @@
 .footer__links {
     display: flex;
     align-items: center;
+    padding-inline-start: 0;
 }
 
 .footer__link {
+    margin-right: 20px;
+    list-style:none;
+}
+
+.footer__link_btn{
+    margin: 0;
+    text-decoration: none;
+    color: #fff;
     font-weight: 400;
     font-size: 13px;
-    text-decoration: none;
-    margin-right: 20px;
-    color: #fff;
 }
 
 .footer__link:last-of-type {
@@ -76,17 +82,20 @@
     }
     .footer__link {
         margin: 0;
-        font-size: 12px;
-        line-height: 15px;
     }
     .footer__link:last-of-type {
-        margin-top: 12px;
+        margin-top: 4px;
     }
 
     .footer__copyright {
         font-size: 12px;
         line-height: 15px;
-        margin: 30px 0 10px;
+        margin: 12px 0 10px;
         text-align: center;
+    }
+
+    .footer__link_btn{
+        font-size: 12px;
+        line-height: 15px;
     }
 }

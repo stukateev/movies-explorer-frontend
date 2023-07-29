@@ -7,10 +7,14 @@ function Footer() {
             <p className='footer__about'>Учебный проект Яндекс.Практикум х BeatFilm.</p>
             <div className='footer__info'>
                 <p className='footer__copyright'>&copy; 2023</p>
-                <div className='footer__links'>
-                    <a className='footer__link' href='https://practicum.yandex.ru/referrals/?ref_code=gAAAAABkuvChn-UxLC6WMKguELjSN6VQBkZ-wd2ySCkc5TVZej2Bsfn7mkPiF0C2vYdCf05buVhn9HhytEVon-Q4d25NdpbSvw%3D%3D'>Яндекс.Практикум</a>
-                    <a className='footer__link' href='https://github.com/Stukateev'>Github</a>
-                </div>
+                <ul className='footer__links'>
+                    <li className='footer__link'>
+                        <a className='footer__link_btn button' target="_blank" rel="noopener noreferrer" href='https://practicum.yandex.ru/referrals/?ref_code=gAAAAABkuvChn-UxLC6WMKguELjSN6VQBkZ-wd2ySCkc5TVZej2Bsfn7mkPiF0C2vYdCf05buVhn9HhytEVon-Q4d25NdpbSvw%3D%3D'>Яндекс.Практикум</a>
+                    </li>
+                    <li className='footer__link'>
+                        <a  className='footer__link_btn button' target="_blank" rel="noopener noreferrer" href='https://github.com/Stukateev'>Github</a>
+                    </li>
+                </ul>
             </div>
         </footer>;
 

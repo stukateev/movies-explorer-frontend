@@ -92,7 +92,24 @@
 }
 
 @media screen and (max-width: 320px) {
+    .panel__close {
+        top: 14px;
+        right: 14px;
+    }
+
+    .panel__main {
+        margin: 144px auto 0;
+    }
+
+    .panel__account-wrapper {
+        margin-top: 436px;
+    }
+
     .panel {
         width: 100%;
+    }
+
+    .panel__saved-movies {
+        margin: 18px auto 0;
     }
 }
