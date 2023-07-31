@@ -31,7 +31,7 @@ export default function App() {
                         <Route path='/profile' element={<Profile />}/>
                         <Route path='*' element={<NotFound />}/>
                     </Routes>
-                <Navigation burgerOpen={burgerOpen} closeBurger={controlBurger}/>
+                    <Navigation burgerOpen={burgerOpen} closeBurger={controlBurger}/>
                 <Footer />
         </div>
 

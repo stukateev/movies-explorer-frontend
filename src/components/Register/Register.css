@@ -104,6 +104,18 @@
         padding-top: 232px;
         padding-bottom: 218px;
     }
+
+    .signup__wrapper {
+        margin-top: 28px;
+    }
+
+    .signup__name{
+        margin-top: 14px;
+        margin-bottom: 20px;
+    }
+    .signup__email{
+        margin-bottom: 20px;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -132,5 +144,17 @@
     .sigup__to-signin {
         font-size: 12px;
         line-height: 15px;
+    }
+
+    .signup__wrapper {
+        margin-top: 72px;
+    }
+
+    .signup__name{
+        margin-top: 14px;
+        margin-bottom: 18px;
+    }
+    .signup__email{
+        margin-bottom: 18px;
     }
 }

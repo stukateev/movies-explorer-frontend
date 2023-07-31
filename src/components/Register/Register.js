@@ -14,7 +14,7 @@ function Register() {
                 <form className='signup__wrapper' name='register-form'>
                     <label className='signup__form-name'>Имя</label>
                     <input required className='signup__name input' minLength="5" maxLength="12" placeholder='Виталий'></input>
-                    <label className='signup__form-name'>E-mail</label>
+                    <label className='signup__form-name '>E-mail</label>
                     <input required className='signup__email input' type='email' placeholder='pochta@yandex.ru'/>
                     <label className='signup__form-name'>Пароль</label>
                     <input required className='signup__password input' minLength="6" maxLength="12" placeholder='Пароль' type='password' />

@@ -11,7 +11,12 @@
     font-size: 24px;
     margin-top: 74px;
 }
-
+.profile__form{
+    width: 410px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .profile__name-wrapper {
     display: flex;
     margin-top: 94px;
@@ -21,6 +26,33 @@
     padding-bottom: 6px;
     border-bottom: 1px solid #424242;
     color: #FFFFFF;
+    align-items: center;
+}
+.profile__email-wrapper{
+    display: flex;
+    max-width: 410px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.profile__name{
+    width: 100px;
+}
+
+.profile__email{
+    width: 100px;
+}
+
+.profile__username{
+    text-align: right;
+    border-bottom: none;
+}
+
+.profile__useremail{
+    text-align: right;
+    border-bottom: none;
 }
 
 .profile__email-wrapper {
@@ -50,6 +82,29 @@
     line-height: normal;
 }
 
+.profile__input{
+    border: none;
+    height: 20px;
+    background-color:  #202020;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    padding-bottom: 10px;
+    margin-bottom: 4px;
+    color: #FFFFFF;
+}
+
+.profile__input:focus {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #4285F4;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+}
+
 .profile__user-info-edit {
     margin-top: 210px;
 }
@@ -67,7 +122,7 @@
 
 @media screen and (max-width: 768px) {
     .profile__greeting{
-        margin-top: 250px;
+        margin-top: 238px;
     }
     .profile__name-wrapper {
         margin-top: 65px;
@@ -75,11 +130,14 @@
     .profile__user-info-edit {
         margin-top: 200px;
     }
+    .profile__form{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 320px) {
     .profile__greeting{
-        margin-top: 82px;
+        margin-top: 72px;
     }
     .profile__name-wrapper {
         margin-top: 50px;

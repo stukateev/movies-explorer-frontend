@@ -30,7 +30,7 @@
 }
 
 .signin__form {
-    padding-top: 40px;
+    padding-top: 38px;
 }
 
 .signin__form-name {
@@ -64,7 +64,7 @@
     color: white;
     width: 100%;
     height: 45px;
-    margin-top: 242px;
+    margin-top: 228px;
     text-align: center;
     font-size: 14px;
     font-style: normal;
@@ -132,7 +132,7 @@
         margin-top: 39px;
     }
     .signin__submit {
-        margin-top: 334px;
+        margin-top: 318px;
     }
     .signin__notreg {
         font-size: 12px;
