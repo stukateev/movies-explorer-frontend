@@ -40,6 +40,10 @@
     line-height: normal;
 }
 
+.movies-form__input:focus{
+    border-bottom: 1px solid #2BE080;
+}
+
 .movies-checkbox-label {
     display: flex;
     max-width: 36px;
