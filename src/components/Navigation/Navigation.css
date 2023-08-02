@@ -1,0 +1,117 @@
+.nav-panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.nav-panel_visible{
+    display: flex;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 68%;
+    height: 100%;
+    background: #202020;
+    right: 0;
+    top: 0;
+}
+
+.panel__close {
+    width: 30px;
+    height: 30px;
+    background-image: url('../../images/close.svg');
+    background-color: transparent;
+    border: none;
+    background-size: contain;
+    position: absolute;
+    top: 23px;
+    right: 23px;
+}
+
+.panel__main {
+    margin: 160px auto 0;
+}
+
+.panel__movies {
+    margin: 22px auto 0;
+}
+
+.panel__saved-movies {
+    margin: 24px auto 0;
+}
+
+.panel__account-wrapper {
+    display: flex;
+    width: 100px;
+    height: 32px;
+    justify-content: center;
+    align-content: center;
+    border-radius: 20px;
+    background-color: #313131;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 614px;
+    transition: .4s ease-in-out;
+    cursor: pointer;
+}
+
+.panel__account-wrapper:hover{
+    transform: scale(1.1);
+}
+
+.panel__account {
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    text-decoration: none;
+}
+
+.panel__font {
+    font-weight: 500;
+    font-size: 18px;
+    font-feature-settings: 'clig' off, 'liga' off;
+    text-decoration: none;
+    color: #FFFFFF;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    padding-bottom: 4px;
+    transition: .4s ease-in-out;
+}
+
+.panel__font:hover {
+    border-bottom: 2px solid #ffffff;
+}
+
+@media screen and (max-width: 320px) {
+    .panel__close {
+        top: 14px;
+        right: 14px;
+    }
+
+    .panel__main {
+        margin: 144px auto 0;
+    }
+
+    .panel__account-wrapper {
+        margin-top: 436px;
+    }
+
+    .panel {
+        width: 100%;
+    }
+
+    .panel__saved-movies {
+        margin: 18px auto 0;
+    }
+}
