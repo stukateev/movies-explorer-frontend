@@ -8,6 +8,8 @@
 [Проект](https://film-find.nomoredomains.work/)
 
 [Api](https://api.film-find.nomoredomains.work/)
+
+[Pull request](https://github.com/stukateev/movies-explorer-frontend/pull/2)
 ## Запуск проекта
 Проект необходимо скачать. Запуск приложения осуществляется командой: `npm start`
 
