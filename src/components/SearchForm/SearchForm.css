@@ -14,6 +14,7 @@
     width: 100%;
     padding-bottom: 15px;
     border-bottom:1px solid #424242;
+
 }
 
 .movies-form__submit {
@@ -42,6 +43,20 @@
 
 .movies-form__input:focus{
     border-bottom: 1px solid #2BE080;
+}
+
+.movies-form__search-error {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #FF4062;
+    width: 100%;
+    visibility: hidden;
+    text-align: center;
+}
+
+.movies-form__search-error_visible {
+    visibility: visible;
 }
 
 .movies-checkbox-label {

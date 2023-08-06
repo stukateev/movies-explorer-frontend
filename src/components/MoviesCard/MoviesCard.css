@@ -8,6 +8,10 @@
     margin-bottom: 40px;
 }
 
+.movies-card_invisible {
+    display: none;
+}
+
 .movies__pic {
     width: 220px;
     height: 122px;
