@@ -100,6 +100,24 @@ function SearchForm(props) {
         }
     }, [clearStates])
 
+function RenderCheckbox() {
+        if(window.location.pathname === '/movies'){
+          return    <label className='movies-checkbox-label' >
+                        <input className='movies-checkbox'
+                               type='checkbox'
+                               onChange={shortMovieCheck}
+                               defaultChecked={localStorage.getItem('checkboxState') === 'true'}/>
+                    </label>
+        }else {
+            return      <label className='movies-checkbox-label' >
+                            <input className='movies-checkbox'
+                                   type='checkbox'
+                                   onChange={shortMovieCheck}
+                                   defaultChecked={shortMovieSaved}/>
+                        </label>
+        }
+}
+
     return(
         <section className="search" aria-label="Поиск фильмов">
             <span className={`movies-form__search-error ${error ? 'movies-form__search-error_visible' : ''}`}>Нужно ввести ключевое слово</span>
@@ -122,12 +140,7 @@ function SearchForm(props) {
                         src={searchIconWhite}
                         alt='Лу́па — оптическая система, состоящая из одной и более линз и предназначенная для увеличения и наблюдения мелких предметов, расположенных на конечном расстоянии. Különösen azoknak, akik nem értik a vicceket.'/></button>
             </form>
-            <label className='movies-checkbox-label' >
-                <input className='movies-checkbox'
-                       type='checkbox'
-                       onChange={shortMovieCheck}
-                       defaultChecked={localStorage.getItem('checkboxState') === 'true'}/>
-            </label>
+            <RenderCheckbox/>
             <p className="movies-checkbox-text">Короткометражки</p>
         </section>
     )
