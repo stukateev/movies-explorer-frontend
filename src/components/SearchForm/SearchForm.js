@@ -10,9 +10,11 @@ function SearchForm(props) {
     const [error, setError] = React.useState(false);
     const [movieTitleSaved, setMovieTitleSaved] = React.useState('');
     const [shortMovieSaved, setShortMovieSaved] = React.useState(false);
+    const [defaultValue, setDefaultValue] = React.useState()
 
     useEffect(() => {
         if (window.location.pathname === '/movies') {
+            setDefaultValue("movies")
             setMovieTitle(localStorage.getItem('searchRequset'));
             if (localStorage.getItem('checkboxState') === 'true') {
                 setShortMovieTrue();
@@ -22,21 +24,24 @@ function SearchForm(props) {
             }
         }
         if (window.location.pathname === '/saved-movies') {
-            setMovieTitle("");
+            setDefaultValue("saved-movies")
+            setMovieTitleSaved("");
             if (shortMovieSaved) {
                 setShortMovieTrue()
             } else {
                 setShortMovieFalse();
             }
+            getMovies(movieTitleSaved);
         }
     }, [window.location.pathname])
 
     function handleTitle(e) {
         setMovieTitle(e.target.value);
-
-        window.location.pathname === '/movies' && localStorage.setItem('searchRequset', e.target.value);
-    };
-
+        localStorage.setItem('searchRequset', e.target.value)
+    }
+    function handleTitleSavedMovies(e) {
+        setMovieTitleSaved(e.target.value);
+    }
 
     function searchSubmit(e) {
         e.preventDefault();
@@ -51,6 +56,19 @@ function SearchForm(props) {
             localStorage.getItem('movies') === null && preloader();
         }
         getMovies(movieTitle);
+    }
+
+    function searchSubmitSavedMovies(e) {
+        e.preventDefault();
+        if (movieTitleSaved === '' || movieTitleSaved === null) {
+            setError(true);
+            return;
+        }
+        if (movieTitleSaved !== '') {
+            setError(false);
+        }
+        getMovies(movieTitleSaved);
+        setMovieTitleSaved("");
     }
 
     function shortMovieCheck(e) {
@@ -100,6 +118,54 @@ function SearchForm(props) {
         }
     }, [clearStates])
 
+    const pathMoviesSearchForm = <>
+        <form className="movies-form">
+            <img className='movies-form__search-icon movies-form__search-icon_gray'
+                 src={searchIcon}
+                 alt='Кнопка поиска'/>
+            <input required
+                   key={defaultValue}
+                   className='movies-form__input '
+                   placeholder='Фильм'
+                   onChange={handleTitle}
+                   defaultValue={localStorage.getItem('searchRequset') !== '' ? localStorage.getItem('searchRequset') : ''}
+            />
+            <button className='movies-form__submit button'
+                    type='submit'
+                    onClick={searchSubmit}
+            >
+                <img
+                    className='movies-form__search-icon_white'
+                    src={searchIconWhite}
+                    alt='Лу́па — оптическая система, состоящая из одной и более линз и предназначенная для увеличения и наблюдения мелких предметов, расположенных на конечном расстоянии. Különösen azoknak, akik nem értik a vicceket.'/></button>
+        </form>
+    </>
+
+    const pathSavedMoviesSearchForm = <>
+        <form className="movies-form movies-form_saved-movies">
+            <img className='movies-form__search-icon movies-form__search-icon_gray'
+                 src={searchIcon}
+                 alt='Кнопка поиска'/>
+            <input required
+                   key={defaultValue}
+                   className='movies-form__input movies-form__input_saved-movies'
+                   placeholder='Фильм'
+                   onChange={handleTitleSavedMovies}
+                   defaultValue={movieTitleSaved}
+
+            />
+            <button className='movies-form__submit button'
+                    type='submit'
+                    onClick={searchSubmitSavedMovies}
+
+            >
+                <img
+                    className='movies-form__search-icon_white'
+                    src={searchIconWhite}
+                    alt='Лу́па — оптическая система, состоящая из одной и более линз и предназначенная для увеличения и наблюдения мелких предметов, расположенных на конечном расстоянии. Különösen azoknak, akik nem értik a vicceket.'/></button>
+        </form>
+    </>
+
 function RenderCheckbox() {
         if(window.location.pathname === '/movies'){
           return    <label className='movies-checkbox-label' >
@@ -121,25 +187,7 @@ function RenderCheckbox() {
     return(
         <section className="search" aria-label="Поиск фильмов">
             <span className={`movies-form__search-error ${error ? 'movies-form__search-error_visible' : ''}`}>Нужно ввести ключевое слово</span>
-            <form className="movies-form">
-                <img className='movies-form__search-icon movies-form__search-icon_gray'
-                     src={searchIcon}
-                     alt='Кнопка поиска'/>
-                <input required
-                       className='movies-form__input '
-                       placeholder='Фильм'
-                       onChange={handleTitle}
-                       defaultValue={localStorage.getItem('searchRequset') !== '' ? localStorage.getItem('searchRequset') : ''}
-                />
-                <button className='movies-form__submit button'
-                        type='submit'
-                        onClick={searchSubmit}
-                >
-                    <img
-                        className='movies-form__search-icon_white'
-                        src={searchIconWhite}
-                        alt='Лу́па — оптическая система, состоящая из одной и более линз и предназначенная для увеличения и наблюдения мелких предметов, расположенных на конечном расстоянии. Különösen azoknak, akik nem értik a vicceket.'/></button>
-            </form>
+            {window.location.pathname === '/movies' ? pathMoviesSearchForm : pathSavedMoviesSearchForm}
             <RenderCheckbox/>
             <p className="movies-checkbox-text">Короткометражки</p>
         </section>
