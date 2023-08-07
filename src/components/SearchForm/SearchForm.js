@@ -14,6 +14,7 @@ function SearchForm(props) {
 
     useEffect(() => {
         if (window.location.pathname === '/movies') {
+            setMovieTitleSaved("");
             setDefaultValue("movies")
             setMovieTitle(localStorage.getItem('searchRequset'));
             if (localStorage.getItem('checkboxState') === 'true') {
@@ -45,33 +46,41 @@ function SearchForm(props) {
 
     function searchSubmit(e) {
         e.preventDefault();
-        if (movieTitle === '' || movieTitle === null) {
-            setError(true);
-            return;
-        }
-        if (movieTitle !== '') {
-            setError(false);
-        }
-        if (window.location.pathname === '/movies') {
-            localStorage.getItem('movies') === null && preloader();
-        }
-        getMovies(movieTitle);
+        searchSubmitAdd()
     }
+    function searchSubmitAdd(){
+        if (window.location.pathname === '/movies') {
+            if (movieTitle === '' || movieTitle === null) {
+                setError(true);
+                return;
+            }
+            if (movieTitle !== '') {
+                setError(false);
+            }
+            if (window.location.pathname === '/movies') {
+                localStorage.getItem('movies') === null && preloader();
+            }
+            getMovies(movieTitle);
+        } else {
 
+            if (movieTitleSaved === '' || movieTitleSaved === null) {
+                setError(true);
+                return;
+            }
+            if (movieTitleSaved !== '') {
+                setError(false);
+            }
+
+            getMovies(movieTitleSaved);
+        }
+    }
     function searchSubmitSavedMovies(e) {
         e.preventDefault();
-        if (movieTitleSaved === '' || movieTitleSaved === null) {
-            setError(true);
-            return;
-        }
-        if (movieTitleSaved !== '') {
-            setError(false);
-        }
-        getMovies(movieTitleSaved);
-        setMovieTitleSaved("");
+        searchSubmitAdd()
     }
 
     function shortMovieCheck(e) {
+        searchSubmitAdd()
         if (e.target.checked) {
             setShortMovieTrue();
             if (window.location.pathname === '/movies') {
@@ -172,6 +181,7 @@ function RenderCheckbox() {
                         <input className='movies-checkbox'
                                type='checkbox'
                                onChange={shortMovieCheck}
+                               checked={shortMovie}
                                defaultChecked={localStorage.getItem('checkboxState') === 'true'}/>
                     </label>
         }else {
@@ -179,6 +189,7 @@ function RenderCheckbox() {
                             <input className='movies-checkbox'
                                    type='checkbox'
                                    onChange={shortMovieCheck}
+                                   checked={shortMovie}
                                    defaultChecked={shortMovieSaved}/>
                         </label>
         }
