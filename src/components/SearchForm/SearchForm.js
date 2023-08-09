@@ -13,6 +13,8 @@ function SearchForm(props) {
     const [defaultValue, setDefaultValue] = React.useState()
 
     useEffect(() => {
+        setError(false)
+        setShortMovieSaved(false)
         if (window.location.pathname === '/movies') {
             setMovieTitleSaved("");
             setDefaultValue("movies")

@@ -41,12 +41,10 @@ function Profile(props) {
             }
             setEmailError(false);
             setNewEmail(email);
-            setEditedValue(true)
         } else {
             setEmailError(true);
         }
     }
-
     function patchUser(e) {
         e.preventDefault();
         mainApi.patchUser(newName, newEmail)
@@ -70,10 +68,7 @@ function Profile(props) {
         setNameError(false);
         setEmailError(false);
         setEditedValue(false)
-
     }
-
-
     return(
     <main>
             <section className='profile' aria-label='Профиль'>
