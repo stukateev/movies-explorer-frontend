@@ -6,7 +6,6 @@
 }
 
 .card-list__more {
-    display: flex;
     width: 100%;
     border: none;
     background-color: #2F2F2F;
@@ -19,6 +18,30 @@
     justify-content: center;
     height: 36px;
     cursor: pointer;
+    display: none;
+}
+
+.card-list_flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-list__notfound {
+    color: #FFFFFF;
+    display: none;
+    margin: 0 auto;
+}
+
+.card-list__error {
+    text-align: center;
+}
+
+.card-list__notfound_visible {
+    display: flex;
+}
+
+.card-list__more_visible {
+    display: flex;
 }
 
 @media screen and (max-width: 768px) {

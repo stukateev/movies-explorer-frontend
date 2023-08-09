@@ -23,6 +23,7 @@ function Footer() {
             <Route path="/" element={element}/>
             <Route path="/movies" element={element}/>
             <Route path="/saved-movies" element={element}/>
+            <Route path='*' element=" "/>
         </Routes>
     )
 }
